@@ -1,0 +1,60 @@
+open jdk 17 설치
+자바 설치시 저장 폴더이름에 띄어쓰기 없게
+
+C:\Program Files\java\jdk-17.0.11.9-hotspot\
+
+로 바꿔서 경로 설정하기
+
+
+
+자바 제대로 설치되었는지 확인 방법
+cmd 실행 후 차례로 아래 명령어 입력
+1. javac
+2. java -version
+
+
+
+javac.exe java.exe 가 모든 폴더에서 먹히는 이유
+
+1.시스템 환경변수 편집 실행
+2.환경변수 클릭
+- 한개의 os에 계정 여러개 존재 가능
+계정마다 설정값 다르게 가능 - 사용자 변수
+모든 계정에 설정되는 변수 - 시스템 변수
+
+시스템 변수 - Path클릭 - 환경변수편집
+맨위 파일 경로 파일탐색기에 적어 열기
+C:\Program Files\java\jdk-17.0.11.9-hotspot\bin
+--들어가면 javac.exe 존재함
+
+.exe -- 실행파일
+
+메모리로 올림
+
+
+javac Hello.java
+java Hello
+
+
+
+이클립스 STS 설치
+create java project - 버전 17로
+
+
+central process unit - cpu
+
+os - 프로그램 관리
+
+JVM - java 실행시 JVM 실행됨 - .java 프로그램 실행시킴
+
+
+
+
+
+
+
+
+
+
+
+
