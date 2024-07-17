@@ -3,22 +3,32 @@ public class MultiplicationTablesNinth {
 
 	public static void main(String[] args) {
 
-		
-		for(int dan = 2; dan <= 9; dan++) {
+		for (int dan = 2; dan <= 9; dan++) {
 
 			System.out.println(dan + "단을 출력 합니다.");
-			
-			for(int i = 1; i <= 9; i++) {
+
+			for (int i = 1; i <= 9; i++) {
 				System.out.println(dan + " x " + i + " = " + dan * i);
 			}
-			
+
 			System.out.println("\n");
 		}
+
 		
 		
 		
 		
-		
+		//1단부터 9단까지
+		for (int dan = 1; dan <= 9; dan++) {
+
+			System.out.println(dan + "단을 출력 합니다.");
+
+			for (int i = 1; i <= 9; i++) {
+				System.out.println(dan + " x " + i + " = " + dan * i);
+			}
+
+			System.out.println("\n");
+		}
 
 	}
 
