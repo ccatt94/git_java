@@ -72,6 +72,32 @@ public class StarExample {
 
 			System.out.println();
 		}
+		System.out.println();
+		
+		
+		// 피라미드 정렬
+		for(int i = 1; i <= 4; i++) {
+			
+			for(int j = 1; j <= 4-i; j++) {
+				System.out.print(" ");
+			}
+			for(int j = 1; j <= 2*i-1; j++) {
+				System.out.print("*");
+			
+			}
+			System.out.println();
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 	}
 }
