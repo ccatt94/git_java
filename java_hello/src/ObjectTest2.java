@@ -72,6 +72,7 @@ public class ObjectTest2 {
 		grade1.setKor(90);
 		grade1.setEng(90);
 		grade1.setMath(90);
+		System.out.println(grade1.avg);
 		
 		System.out.println("국어 " + grade1.getKor());
 		System.out.println("영어 " + grade1.getEng());
@@ -86,6 +87,7 @@ public class ObjectTest2 {
 		System.out.println(grade1.getAvg());
 		System.out.println(grade1.avg);
 		System.out.println(grade1.kor);
+		System.out.println(grade1.getCharGrade() + "입니다.");
 		
 //		grade1.checkGradeObject(grade1);
 //		

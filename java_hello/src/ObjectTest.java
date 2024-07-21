@@ -109,11 +109,14 @@ class Grade{
 		return math;
 	}
 
-	
+	double getAvg() {
+		avg = (kor + eng + math) / 3.0;
+		return avg;
+	}
 	
 	char getCharGrade() {
 		
-		double avg = (kor + eng + math) / 3.0;
+//		double avg = (kor + eng + math) / 3.0;
 		
 		if(avg >= 90) {
 			grade = '수';
@@ -155,6 +158,8 @@ public class ObjectTest {
 		System.out.println("영어 " + grade.getEng());
 		System.out.println("수학 " + grade.getMath());
 		
+		System.out.println(grade.getAvg());
+		System.out.println();
 		System.out.println(grade.getCharGrade() + "입니다.");
 		grade.getGrade();
 		
