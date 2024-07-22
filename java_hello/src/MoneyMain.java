@@ -1,11 +1,17 @@
 
-public class MoneyMain {
+class Money{
+	int money;
+	
+	void setMoney(int money) {
+		this.money = money;
+	}
+	
+	void show() {
 
-	public static void main(String[] args) {
-		int money = 126500;
 		int m50000, m10000, m5000, m1000, m500, m100;
-		
 		int tMoney;
+		
+		System.out.println(money);
 		
 		m50000 = money / 50000;
 		tMoney = money % 50000;
@@ -30,6 +36,19 @@ public class MoneyMain {
 		m100 = tMoney / 100;
 		tMoney = tMoney % 100;
 		System.out.println("백원 : " + m100 + "개");
+	}
+}
+
+public class MoneyMain {
+
+	public static void main(String[] args) {
+		Money money = new Money();
+		money.setMoney(1456000);
+		money.show();
+		
+		
+		
+		
 		
 		
 	}
