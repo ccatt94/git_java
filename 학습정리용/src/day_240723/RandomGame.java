@@ -22,6 +22,7 @@ public class RandomGame {
 				System.out.println("DOWN!! 기회가 " + chance + "번 남았습니다.");
 
 			} else if ((randInt > num) && (chance > 1)) {
+				chance--;
 				System.out.println("UP!! 기회가 " + chance + "번 남았습니다.");
 
 			} else if (randInt != num) {

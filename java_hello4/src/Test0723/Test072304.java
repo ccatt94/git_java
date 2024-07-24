@@ -1,6 +1,7 @@
 package Test0723;
 
-	class Song{
+
+class Song{
 		String title, artist, country;
 		int year;
 		
