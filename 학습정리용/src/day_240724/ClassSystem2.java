@@ -1,23 +1,16 @@
 package day_240724;
 
-class Star {
+class System2 {
+	static AA out = new AA();
+}
 
-	void printStar(int num) {
-		for (int i = 1; i <= num; i++) {
-			for (int j = 1; j <= i; j++) {
-				System.out.print("*");
-			}
-			System.out.println();
-		}
+class AA {
+	public AA() {
+		System.out.println("AA생성");
 	}
 
-	void reverseStar(int num) {
-		for (int i = 1; i <= num; i++) {
-			for (int j = 0; j <= num - i; j++) {
-				System.out.print("*");
-			}
-			System.out.println();
-		}
+	public void println() {
+		System.out.println("메롱!!");
 	}
 }
 
@@ -25,11 +18,8 @@ public class ClassSystem2 {
 
 	public static void main(String[] args) {
 
-		Star star = new Star();
-
-		star.printStar(5);
-		star.reverseStar(5);
-
+		System2.out.println();
+		System2.out.println();
+		System2.out.println();
 	}
-
 }
