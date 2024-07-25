@@ -1,0 +1,5 @@
+함수 오버로딩 설명시
+println() 함수에 빗대어 설명
+
+
+String - static과 같게 쓰임
