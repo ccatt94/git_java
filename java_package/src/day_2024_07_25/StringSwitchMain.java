@@ -4,18 +4,27 @@ public class StringSwitchMain {
 
 	public static void main(String[] args) {
 
-		String st1 = "Coffee";
-		String st2 = "Bread";
+		int num = 1;
+		String str = "Spring";
 		
-		String st3 = st1.concat(st2);
-		System.out.println(st3);
+		switch(str) {
+			case "Spring":
+				System.out.println("봄입니다.");
+		}
 		
-		String st4 = "Fresh".concat(st3);
-		System.out.println(st4);
+		switch(num) {
+		case 1:
+		case 2:
+		case 3:
+			System.out.println("봄입니다.");
+		}
 		
-		String str = "abcdefg";
-		System.out.println(str.substring(2));
-		System.out.println(str.substring(2, 4));
+		switch(num) {
+		case 1,2,3:
+			System.out.println("봄입니다.");
+		}
+		
+
 		
 	}
 }

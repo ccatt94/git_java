@@ -4,27 +4,21 @@ public class StringConcatMain {
 
 	public static void main(String[] args) {
 
-		int num = 1;
-		String str = "Spring";
+		String st1 = "Coffee";
+		String st2 = "Bread";
 		
-		switch(str) {
-			case "Spring":
-				System.out.println("봄입니다.");
-		}
+		String st3 = st1.concat(st2);
+		System.out.println(st3);
 		
-		switch(num) {
-		case 1:
-		case 2:
-		case 3:
-			System.out.println("봄입니다.");
-		}
+		String st4 = "Fresh".concat(st3);
+		System.out.println(st4);
 		
-		switch(num) {
-		case 1,2,3:
-			System.out.println("봄입니다.");
-		}
+		String str = "abcdefg";
+		System.out.println(str.substring(2));
+		System.out.println(str.substring(2, 4));
 		
-
+		String str1 = "abcdefg" + 100;
+		System.out.println(str1);
 		
 	}
 }

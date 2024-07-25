@@ -3,3 +3,8 @@ println() 함수에 빗대어 설명
 
 
 String - static과 같게 쓰임
+- final - 상수 - 값이 한번 넣어지면 못바꿈 = immutable (불멸)
+때문에 
+String birth = "<양>" + 7 + '.' + 16; 
+이런 식일 경우 값마다 주소값을 계속 생성하여
+jvm이 버거워함
