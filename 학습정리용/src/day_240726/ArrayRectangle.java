@@ -38,6 +38,9 @@ public class ArrayRectangle {
 		
 		rec[i] = new Rectangle(width, height);
 		}
-
+	}
+	
+	static void getAreaSum(Rectangle[] rec) {
+//		rec.getArea()
 	}
 }
