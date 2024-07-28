@@ -11,13 +11,9 @@ class Rectangle{
 		this.height = h;
 	}
 	
-	int getArea() {
-		return width * height;
+	void getArea() {
+		System.out.println(width * height);
 	}
-	
-//	double getAreaSum(int rec[], int w, int h) {
-////		return 
-//	}
 }
 
 public class ArrayRectangle {
@@ -37,10 +33,15 @@ public class ArrayRectangle {
 		int height = sc.nextInt();
 		
 		rec[i] = new Rectangle(width, height);
+		rec[i].getArea();
+		System.out.println(rec[i]);
 		}
+		
+		
+//		static int getAreaSum(Rectangle[] rec) {
+//			return ;
+//		}
 	}
 	
-	static void getAreaSum(Rectangle[] rec) {
-//		rec.getArea()
-	}
+	
 }
