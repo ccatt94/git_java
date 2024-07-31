@@ -39,9 +39,17 @@ class AIDance extends RobotDance{
 }
 
 class Shape{
+	
+	//더미 함수(오버라이딩시키기위해 억지로만든 함수)
 	public double getArea() {
 		return 0;
 	}
+}
+
+//부모 클래스 생성했는데 더미 함수로 인해 의미없는 함수 생성하지 않고 아래 interface로 구현하는데 메소드 몸체없는없다
+//아래 자식 클래스에서 함수 구현해 주어야함
+interface IShape{
+	public double getArea();	
 }
 
 class Circle extends Shape{
