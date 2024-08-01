@@ -20,25 +20,25 @@ class RspPlayer {
 		this.rsp = rsp;
 	}
 
-	public void getResult(RspPlayer you) {
+	public void getResult(RspPlayer user) {
 
-		System.out.println(this.name + " = " + this.rsp + " , " + you.name + " = " + you.rsp);
+		System.out.println(this.name + " = " + this.rsp + " , " + user.name + " = " + user.rsp);
 
-		if (this.rsp.equalsIgnoreCase(you.rsp)) {
+		if (this.rsp.equalsIgnoreCase(user.rsp)) {
 			System.out.println("비겼습니다.");
 			return;
 		}
 
 		if (this.rsp.equals("가위")) {
-			if (you.rsp.equals("보")) {
+			if (user.rsp.equals("보")) {
 				System.out.println(this.name + "가 이겼습니다.");
-			} else if (you.rsp.equals("바위")) {
+			} else if (user.rsp.equals("바위")) {
 				System.out.println(this.name + "가 졌습니다.");
 			}
 
 		} else if (this.rsp.equals("바위")) {
 
-			switch (you.rsp) {
+			switch (user.rsp) {
 			case "보":
 				System.out.println(this.name + "가 졌습니다.");
 				break;
@@ -51,9 +51,9 @@ class RspPlayer {
 			}
 
 		} else if (this.rsp.equals("보")) {
-			if (you.rsp.equals("가위")) {
+			if (user.rsp.equals("가위")) {
 				System.out.println(this.name + "가 졌습니다.");
-			} else if (you.rsp.equals("바위")) {
+			} else if (user.rsp.equals("바위")) {
 				System.out.println(this.name + "가 이겼습니다.");
 			} else {
 				System.out.println("잘못된 입력입니다.");
