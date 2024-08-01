@@ -3,7 +3,7 @@ package Test0801;
 class Circle{
 	private int r;
 	
-	public Circle(int r) {
+	Circle(int r){
 		this.r = r;
 	}
 	
@@ -12,7 +12,7 @@ class Circle{
 	}
 	
 	public String toString() {
-		return "출력: " + getArea() + "입니다.";
+		return "출력: 넓이는 " + getArea() + "입니다.";
 	}
 }
 
