@@ -28,7 +28,7 @@ class Student extends Person{
 		System.out.println("학과 : " + major);
 		System.out.println("학번 : " + stuNum);
 	}
-	
+// 예외처리 인덱스 범위 초과시 ArrayIndexOutOfBoundsException으로 처
 //	public double average() {
 //		grade
 //		return
