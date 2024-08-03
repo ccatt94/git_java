@@ -2,20 +2,20 @@ package day_240801;
 
 import java.util.Scanner;
 
-class Person{
-	public static Object grade;
+class Person {
+	protected Object grade;
 	protected String name, address;
 	protected int age;
 }
 
-class Student extends Person{
+class Student extends Person {
 	public String school, major;
-	public int stuNum, gradePointAvg;
+	public int stuNum;
+	private double gradePointAvg;
 	protected double[] grade = new double[8];
 	protected int idx = 0;
-	
-	
-	Student(String name, int age, String address, String school, String major, int stuNum){
+
+	Student(String name, int age, String address, String school, String major, int stuNum) {
 		this.name = name;
 		this.age = age;
 		this.address = address;
@@ -23,9 +23,8 @@ class Student extends Person{
 		this.major = major;
 		this.stuNum = stuNum;
 	}
-	
-	
-	public void showInfo(){
+
+	public void showInfo() {
 		System.out.println("이름 : " + name);
 		System.out.println("나이 : " + age);
 		System.out.println("주소 : " + address);
@@ -34,36 +33,37 @@ class Student extends Person{
 		System.out.println("학번 : " + stuNum);
 		System.out.println("----------------------------------");
 	}
-	
-	
-	void setGrade() {
+
+	public void average() {
 		Scanner sc = new Scanner(System.in);
+		System.out.println();
 		System.out.println(grade.length + "학기 학점을 순서대로 입력하세요");
 		System.out.println();
-		for (int idx = 0; idx < grade.length; idx++) {
-			System.out.print((idx+1) + "학기 학점  → ");
-			grade[idx] = sc.nextDouble();
-		}
-		System.out.println("----------------------------------");
-	}
-	
-	
-	
-// 예외처리 인덱스 범위 초과시 ArrayIndexOutOfBoundsException으로 처리
-	public void average() {
-		setGrade();
 		double sum = 0;
-		double avg;
-		for(int idx = 0; idx < grade.length; idx++) {
-			sum = sum + grade[idx];
-		}
-		avg = sum / grade.length;
-		System.out.println(grade.length + "학기 총 평균 평점은 " + avg + "점입니다.");
-	}
-	
-	
-}
 
+		for (int idx = 0; idx < grade.length; idx++) {
+
+			System.out.print((idx + 1) + "학기 학점  → ");
+
+			try {
+				grade[idx] = sc.nextDouble();
+				sum = sum + grade[idx];
+			} catch (Exception e) {
+				System.out.println("잘못된 입력입니다. 다시 입력해주세요.");
+				idx--;
+				sc.nextLine();
+				continue;
+			}
+
+		}
+		System.out.println();
+		System.out.println("----------------------------------");
+		System.out.println();
+		gradePointAvg = sum / grade.length;
+		System.out.println(grade.length + "학기 총 평균 평점은 " + gradePointAvg + "점입니다.");
+	}
+
+}
 
 public class PersonStudentMain {
 
