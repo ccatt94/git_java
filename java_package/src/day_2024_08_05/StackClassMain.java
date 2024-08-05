@@ -12,44 +12,40 @@ interface Stack {
 	boolean push(String val); // 스택의 톱(top)에 저장된 문자 리턴
 }
 
-class StackApp implements Stack {
-
-	private String[] arrStack;
+class StringStack implements Stack {
+	
+	private int size;
+	private String[] stack;
 	private int index; // top
 
-	public StackApp(int size) {
-		arrStack = new String[size];
-		index = -1;
+	public StringStack(int size) {
+		index = 0;
+		this.size = size;
+		stack = new String[size];
 	}
 
 	@Override
 	public int length() {
-		return index;
+		return stack.length;
 	}
 
 	@Override
 	public int capacity() {
-		return arrStack.length;
+		return size - index;
 	}
 
 	@Override
 	public String pop() {
-		if (index == -1) {
-			return "비어있읍";
-		} else {
-			String str = arrStack[index-1];
-			index--;
-			return str;
-		}
+		return stack[--index];
 
 	}
 
 	@Override
 	public boolean push(String val) {
-		if (index == arrStack.length) {
+		if (capacity() <= 0) {
 			return false;
 		} else {
-			arrStack[index] = val;
+			stack[index] = val;
 			index++;
 			return true;
 		}
@@ -57,16 +53,14 @@ class StackApp implements Stack {
 
 }
 
-public class StackMain {
+public class StackClassMain {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-
-		StackApp stack;
-
+		StringStack s;
+		
 		System.out.print("총 스택의 저장 공간의 크기 입력>>");
-
-		stack = new StackApp(sc.nextInt());
+		s = new StringStack(sc.nextInt());
 
 		while (true) {
 
@@ -77,7 +71,7 @@ public class StackMain {
 				break;
 			}
 
-			boolean isFull = stack.push(str);
+			boolean isFull = s.push(str);
 
 			if (isFull == false) {
 				System.out.println("스택이 꽉 차서 푸시 불가!");
@@ -85,10 +79,10 @@ public class StackMain {
 
 		}
 
-		System.out.println("스택에 저장된 모든 문자열 팝: ");
-
-		for (int i = 0; i < stack.length(); i++) {
-			System.out.print(stack.pop() + " ");
+		System.out.print("스택에 저장된 모든 문자열 팝: ");
+		
+		for (int i = 0; i < s.length(); i++) {
+			System.out.print(s.pop() + " ");
 		}
 
 	}
