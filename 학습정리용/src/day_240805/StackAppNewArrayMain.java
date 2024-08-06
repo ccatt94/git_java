@@ -40,7 +40,16 @@ class StringStack implements Stack {
 	@Override
 	public boolean push(String val) {
 		if (capacity() <= 0) {
-			return false;
+			
+			String[] newStack = new String[stack.length*2];
+			
+			for(int i = 0; i < stack.length; i++) {
+				newStack[i] = stack[i];
+			}
+			stack= newStack;
+			
+			return true;
+			
 		} else {
 			stack[index] = val;
 			index++;
@@ -74,14 +83,7 @@ public class StackAppNewArrayMain {
 
 			if (isFull == false) {
 				System.out.println("스택이 꽉 차서 푸시 불가!");
-//				StringStack[] newStack = null;
-//				
-//				newStack = new StringStack[n*2];
-//				
-//				for(int i = 0; i < StringStack..length(); i++) {
-//					newStack[i] = s[i];
-//				}
-//				s= newStack;
+
 			}
 
 		}

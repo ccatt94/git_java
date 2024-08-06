@@ -1,14 +1,15 @@
 package Test0806;
 
 class Box<T>{
-	private T ob;
 	
-	public void set(T o) {
-		ob = o;
+	private T dou;
+	
+	public void set(T d) {
+		dou = d;
 	}
 	
 	public T get() {
-		return ob;
+		return dou;
 	}
 }
 
