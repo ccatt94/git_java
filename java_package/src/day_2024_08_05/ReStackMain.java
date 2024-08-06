@@ -57,7 +57,7 @@ class StackApp1 implements Stack1 {
 
 }
 
-public class StackMain1 {
+public class ReStackMain {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
@@ -86,8 +86,9 @@ public class StackMain1 {
 		}
 
 		System.out.println("스택에 저장된 모든 문자열 팝: ");
-
-		for (int i = 0; i < stack.length(); i++) {
+		
+		int num = stack.length();
+		for (int i = 0; i < num; i++) {
 			System.out.print(stack.pop() + " ");
 		}
 
