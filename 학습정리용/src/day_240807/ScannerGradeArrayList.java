@@ -20,22 +20,24 @@ public class ScannerGradeArrayList {
 			listGrade.add(str);
 		}
 
-		int sum = 0;
+//		int sum = 0;
+		double sum = 0;
 		for (int i = 0; i < COUNT; i++) {
 
 			if (listGrade.get(i).equals("A")) {
-				listGrade.set(i, 4);
+				listGrade.set(i, 4.0);
 			} else if (listGrade.get(i).equals("B")) {
-				listGrade.set(i, 3);
+				listGrade.set(i, 3.0);
 			} else if (listGrade.get(i).equals("C")) {
-				listGrade.set(i, 2);
+				listGrade.set(i, 2.0);
 			} else if (listGrade.get(i).equals("D")) {
-				listGrade.set(i, 1);
+				listGrade.set(i, 1.0);
 			} else if (listGrade.get(i).equals("F")) {
-				listGrade.set(i, 0);
+				listGrade.set(i, 0.0);
 			}
 
-			sum += (int) listGrade.get(i);
+//			sum += (int) listGrade.get(i);
+			sum += (double) listGrade.get(i);
 
 		}
 		double avg = sum / (double) listGrade.size();
