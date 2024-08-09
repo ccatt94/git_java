@@ -1,9 +1,9 @@
-package day_240808;
+package Test0809;
 
 import java.util.Set;
 import java.util.TreeMap;
 
-public class TreeMapMain {
+public class Test080901 {
 
 	public static void main(String[] args) {
 
@@ -11,7 +11,7 @@ public class TreeMapMain {
 		map.put(45, "Brown");
 		map.put(37, "James");
 		map.put(23, "Martin");
-
+		
 		Set<Integer> ks = map.keySet();
 		
 		for(Integer n : ks) {
@@ -23,7 +23,7 @@ public class TreeMapMain {
 		for(Integer n : ks) {
 			System.out.print(map.get(n).toString() + "\t");
 		}
-
+		
 	}
 
 }
